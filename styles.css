@@ -11,11 +11,12 @@
 
 body{
     background:linear-gradient(90deg,#f0f0f0, #f7dd6b, #f7e755);
- 
+    animation:dark-to-light 0.3s ease-in-out;
 }
 
 .dark{
     background:linear-gradient(90deg,#000000, #2c2c2c, rgb(99, 98, 98));
+    animation:light-to-dark 0.3s ease-in-out;
   }
 
 
@@ -126,24 +127,41 @@ font-weight: 700;
   }
 
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da barra de rolagem */
+  width: 10px; 
 }
 
-/* Cor do fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-/* Cor do "thumb" (alça da barra de rolagem) */
+
 ::-webkit-scrollbar-thumb {
   background-color: #f5cc2d;
 }
 
-/* Cor do "thumb" ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e9a003;
 }
 
+@keyframes dark-to-light{
+    0%{
+        background:linear-gradient(90deg,#000000, #2c2c2c, rgb(99, 98, 98));
+    }
+
+    100%{
+        background:linear-gradient(90deg,#f0f0f0, #f7dd6b, #f7e755);
+    }
+}
+
+@keyframes light-to-dark{
+    0%{
+         background:linear-gradient(90deg,#f0f0f0, #f7dd6b, #f7e755);
+    }
+
+    100%{
+        background:linear-gradient(90deg,#000000, #2c2c2c, rgb(99, 98, 98)); 
+    }
+}
 
 
 
